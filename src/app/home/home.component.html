@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm badge">
+    <label for="">Total case</label>
+  <h1 class="display-4"> {{totalCase}}</h1>
+</div>
+  <div class="col-sm badge">
+      <label for="">Total recovered</label>
+  <h1 class="display-4">{{totalRecovered}}</h1>
+  </div>
+  <div class="col-sm badge">
+      <label for="">Total deaths</label>
+  <h1 class="display-4"> {{totalDeaths}}</h1>
+  </div>
+
+</div >
+<div class=" mx-auto"style="width:85%;">
+  <div class="chart-wrapper" >
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [colors]="chartColors"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>

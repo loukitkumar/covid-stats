@@ -1,0 +1,42 @@
+<div class="mx-auto">
+       <div class="form-group col-lg-5 mx-auto">
+           <label for="c">Select Country</label>
+           <select ng-model="text-check" name="" class="form-control" id="c" #input (change)='updateValues(input.value)'>
+               <option value="{{con}}" *ngFor='let con of Countries'>{{con}}</option>
+           </select>
+       </div>
+   </div>
+<div *ngIf="Country" >
+  <div class="row">
+    <div class="col-sm badge">
+      <label for="">Total case</label>
+    <h1 class="display-4"> {{Country.TotalCases}}</h1>
+  </div>
+    <div class="col-sm badge">
+        <label for="">Total recovered</label>
+    <h1 class="display-4 text-success">{{Country.TotalRecovered}}</h1>
+    </div>
+    <div class="col-sm badge">
+        <label for="">Total deaths</label>
+    <h1 class="display-4"> {{Country.TotalDeaths}}</h1>
+    </div>
+
+  </div >
+  <div class="row">
+    <div class="col-sm badge">
+      <label for="">New Active Cases</label>
+    <h1 class="display-4"> {{Country.ActiveCases}}</h1>
+  </div>
+  <div class="col-sm badge">
+    <label for="">New Cases</label>
+  <h1 class="display-4 "> {{Country.NewCases}}</h1>
+</div>
+<div class="col-sm badge">
+  <label for="">New Deaths</label>
+<h1 class="display-4 text-danger"> {{Country.NewDeaths}}</h1>
+</div>
+  </div>
+</div>
+<div class="row">
+    <small class="text-muted mx-auto">Last Updated: {{Country.LastUpdate}}</small>
+</div>
